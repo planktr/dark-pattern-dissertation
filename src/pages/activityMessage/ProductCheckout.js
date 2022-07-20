@@ -39,7 +39,7 @@ const ProductCheckout = () => {
                         <span className="">Check stock in your area</span>
                         <form className="flex my-3">
                             <input className="address rounded-l-md w-4/5 px-2 py-1 outline-none" type="text" placeholder="Enter town or full postcode"/>
-                            <button className="bg-white text-gray-500 hover:text-currys-primary rounded-r-md w-1/5 px-2 py-1"><FontAwesomeIcon icon="magnifying-glass" /></button>
+                            <button disabled={true} className="bg-white text-gray-500 hover:text-currys-primary rounded-r-md w-1/5 px-2 py-1"><FontAwesomeIcon icon="magnifying-glass" /></button>
                         </form>
                         <span className="text-sm"><FontAwesomeIcon className="text-green-700" icon="truck" />&nbsp; FREE FAST delivery on orders over £50</span><br/>
                         <span className="text-sm"><FontAwesomeIcon className="text-green-700" icon="warehouse" />&nbsp; FREE collection from Store subject to Stock availability</span>

@@ -4,10 +4,18 @@ import { ModalProgress } from '../../components/ModalProgress';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ProductHeader from "./ProductHeader";
 import ProductCheckout from "./ProductCheckout";
+import { useDispatch } from 'react-redux';
+import { completed } from '../../app/testSlice';
+
+
 
 const ActivityMessage = () => {
+    const dispatch = useDispatch();
 
     let { testId } = useParams();
+
+    const handleCompletion = () => dispatch(completed({ testId: testId, stageId: 1 }));
+
 
     const [showModal, setShowModal] = React.useState(false);
     const [showButton, setShowButton] = React.useState(true);
@@ -27,10 +35,11 @@ const ActivityMessage = () => {
       }, [showButton, showModal]);
 
 
-   let navigate = useNavigate({replace: true}); 
+    let navigate = useNavigate({replace: true}); 
     const routeChange = () =>{ 
-     let path = `${++testId}`;
-    navigate("/test/"+path+"/stage/1")
+        handleCompletion();
+        let path = `${++testId}`;
+        navigate("/test/"+path+"/stage/1")
     }
 
     return (

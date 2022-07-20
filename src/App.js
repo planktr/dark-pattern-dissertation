@@ -4,9 +4,10 @@ import NavBar from './components/NavBar';
 import Home from './pages/HomePage';
 import Links from './pages/LinksPage';
 import TestProgress from './components/TestProgress';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCircleDot, faFireFlameCurved, faTruck, faWarehouse, faMagnifyingGlass, faBasketShopping, faStar, faStarHalfStroke, faChevronRight, faMoneyCheck, faShareNodes, faGhost} from '@fortawesome/free-solid-svg-icons'
-import { faLightbulb, faFaceGrinStars, faCircleQuestion} from '@fortawesome/free-regular-svg-icons'
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCircleDot, faFireFlameCurved, faTruck, faWarehouse, faMagnifyingGlass, faBasketShopping, faStar, faStarHalfStroke, faChevronRight, faMoneyCheck, faShareNodes, faGhost} from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb, faFaceGrinStars, faCircleQuestion} from '@fortawesome/free-regular-svg-icons';
 import React from "react";
 import {
   BrowserRouter as Routers, Routes, Route, Outlet,

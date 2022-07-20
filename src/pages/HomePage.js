@@ -3,12 +3,16 @@ import React from "react";
 // import { HelloButton } from '../components/Button';
 import { Link } from "react-router-dom";
 import background from '../DrawKit-Vector-Illustration-ecommerce-091.png';
+import { useSelector } from 'react-redux'
+
 
 const Home = () => {
+  const results = useSelector((state) => state.tests.results)
+  console.log(results)
+
     return (
       <>
       <h2 className="hidden">Home</h2>
-
       <section className="flex bg-dark h-screen font-main text-gray-200 px-6">
         <figure className="w-7/12">
           <img class="top-0 max-w-full h-auto" src={background} alt="" />
