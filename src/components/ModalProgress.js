@@ -32,16 +32,16 @@ export const ModalProgress = ({ isOpen, onClose, proceed, bodyText}) => {
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6">
-                  <button
-                    className="hover:text-emerald-500 px-4 py-2 ease-linear transition-all duration-150"
+                  {/* <button
+                    className="hover:text-emerald-500 px-4 py-2 ease-linear transition-all"
                     type="button"
                     onClick={onClose}
                   >
                     Close
-                   {/* <FontAwesomeIcon icon={["far", "circle-xmark"]} /> */}
-                  </button>
+                   <FontAwesomeIcon icon={["far", "circle-xmark"]} />
+                  </button> */}
                   <button
-                    className="hover:text-emerald-400 bg-gray-800 hover:bg-gray-900 px-4 py-2 shadow hover:shadow-lg ease-linear transition-all duration-150"
+                    className="hover:text-emerald-400 bg-gray-800 hover:bg-gray-900 px-4 py-2 shadow hover:shadow-lg ease-linear transition-all"
                     type="button"
                     onClick={proceed}
                   >

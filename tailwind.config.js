@@ -18,6 +18,7 @@ module.exports = {
         violet: colors.violet,
         amber: colors.amber,
         cyan: colors.cyan,
+        blue: colors.blue,
         'dark': '#121212',
         'currys-primary': '#4c12a1',
       },

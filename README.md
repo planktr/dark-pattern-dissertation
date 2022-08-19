@@ -1,6 +1,10 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This dissertation project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## `npm install`
+
+Installs all dependencies to the project to enable you to run
 
 ## Available Scripts
 

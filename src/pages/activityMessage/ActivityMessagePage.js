@@ -5,17 +5,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ProductHeader from "./ProductHeader";
 import ProductCheckout from "./ProductCheckout";
 import { useDispatch } from 'react-redux';
-import { completed } from '../../app/testSlice';
+import { completed, startTimer } from '../../app/testSlice';
+import { Instructions } from "../../components/Instructions";
 
 
 
-const ActivityMessage = () => {
-    const dispatch = useDispatch();
+const ActivityMessage = ({ setModalHelpText }) => {
 
     let { testId } = useParams();
 
+    const dispatch = useDispatch();
     const handleCompletion = () => dispatch(completed({ testId: testId, stageId: 1 }));
-
 
     const [showModal, setShowModal] = React.useState(false);
     const [showButton, setShowButton] = React.useState(true);
@@ -33,6 +33,12 @@ const ActivityMessage = () => {
             }
         }
       }, [showButton, showModal]);
+
+    useEffect(() => {
+        const helpText = "test 1";
+        setModalHelpText(helpText);
+        dispatch(startTimer({ startTime: Date.now() }))
+    }, [])
 
 
     let navigate = useNavigate({replace: true}); 
@@ -55,7 +61,7 @@ const ActivityMessage = () => {
                 proceed={routeChange} 
                 bodyText={"This sample page used Activity Message/ Pop-up to inform users of others' behaviour, so as to create a sense of urgency and invoke 'fear of missing out'."}
             />
-
+            <Instructions bodyText={"Q. Find the component that can be considered to be a dark pattern:"}/>
             <article className="flex container w-full px-5 my-8">
 
                 <div className="w-8/12">

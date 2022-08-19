@@ -6,12 +6,14 @@ import Links from './pages/LinksPage';
 import TestProgress from './components/TestProgress';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCircleDot, faFireFlameCurved, faTruck, faWarehouse, faMagnifyingGlass, faBasketShopping, faStar, faStarHalfStroke, faChevronRight, faMoneyCheck, faShareNodes, faGhost} from '@fortawesome/free-solid-svg-icons';
-import { faLightbulb, faFaceGrinStars, faCircleQuestion} from '@fortawesome/free-regular-svg-icons';
+import { faCircleDot, faFireFlameCurved, faTruck, faWarehouse, faMagnifyingGlass, faBasketShopping, faStar, faStarHalfStroke, faChevronRight, faMoneyCheck, faShareNodes, faGhost, faCircleArrowRight, faCircleInfo, faArrowsRotate, faCamera, faDisplay, faSquareVirus, faUsers, faCircleCheck, faHandsClapping} from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb, faFaceGrinStars, faCircleQuestion, faEye} from '@fortawesome/free-regular-svg-icons';
 import React from "react";
 import {
   BrowserRouter as Routers, Routes, Route, Outlet,
 } from "react-router-dom";
+
+import {Result} from './pages/resultPage';
 
 /*
 * /home
@@ -21,7 +23,7 @@ import {
 */
 
 
-library.add(faCircleQuestion, faLightbulb, faCircleDot, faFireFlameCurved, faTruck, faWarehouse, faMagnifyingGlass, faBasketShopping, faStar, faStarHalfStroke, faChevronRight, faMoneyCheck, faShareNodes, faGhost, faFaceGrinStars)
+library.add(faCircleQuestion, faLightbulb, faCircleDot, faFireFlameCurved, faTruck, faWarehouse, faMagnifyingGlass, faBasketShopping, faStar, faStarHalfStroke, faChevronRight, faMoneyCheck, faShareNodes, faGhost, faFaceGrinStars, faCircleArrowRight, faCircleInfo, faEye, faArrowsRotate, faCamera, faDisplay, faSquareVirus, faUsers, faCircleCheck, faHandsClapping)
 
 function App() {
   return (
@@ -33,7 +35,8 @@ function App() {
               <Route path="home" element={<Home />} />
               <Route path="links" element={<Links />} />
               <Route path='test/:testId/stage/:stageId' element={<Test />} />
-              <Route path="*" element={<p>There's nothing here: 404!</p>} />
+              <Route path='result' element={<Result />} />
+              <Route path="*" element={<p className='my-6 text-xl text-center'>There's nothing here: 404!</p>} />
             </Route>
           </Routes>
       </Routers>
@@ -45,7 +48,7 @@ const Layout = () => {
   return (
     <>
       <NavBar />
-      <main className='h-full'>
+      <main className='h-100vh'>
         <Outlet />
       </main>
     </>
